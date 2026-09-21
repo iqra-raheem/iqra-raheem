@@ -69,3 +69,10 @@ I am also open to collaboration and freelance project opportunities.
 ## 📫 Contact
 
 GitHub: [@iqra-raheem](https://github.com/iqra-raheem)
+## 📫 Contact
+## 📫 Contact
+
+* GitHub: [@iqra-raheem](https://github.com/iqra-raheem)
+* Email: [iqrakhan5101023@gmail.com](mailto:iqrakhan5101023@gmail.com)
+
+
