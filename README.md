@@ -1,4 +1,4 @@
-# Hi, I'm Iqra Rahim 👋
+# Hi, I'm Iqra Raheem 👋
 
 ### AI/ML & Python Developer | Computer Vision | CNN
 
