@@ -1,10 +1,11 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>iqra raheem  | AI/ML & Python Developer</title>
+    <title>iqra raheem | AI/ML & Python Developer</title>
 
     <style>
         * {
@@ -174,18 +175,30 @@
             transform: translateY(-3px);
         }
 
-        .project {
-            max-width: 950px;
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            max-width: 1100px;
             margin: auto;
+        }
+
+        .project {
             background: #151b30;
             border: 1px solid #252d48;
             border-radius: 15px;
             padding: 35px;
         }
 
+        .project:hover {
+            border-color: #c084fc;
+            transform: translateY(-4px);
+            transition: 0.3s;
+        }
+
         .project h3 {
             color: #c084fc;
-            font-size: 26px;
+            font-size: 24px;
             margin-bottom: 15px;
         }
 
@@ -208,6 +221,12 @@
             content: "✓ ";
             color: #c084fc;
             font-weight: bold;
+        }
+
+        .project-tech {
+            color: #94a3b8;
+            font-size: 14px;
+            margin-bottom: 25px;
         }
 
         .contact {
@@ -255,6 +274,10 @@
             .hero-card span {
                 font-size: 60px;
             }
+
+            .projects-container {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -263,7 +286,7 @@
 
     <!-- Navigation -->
     <nav>
-        <h2>iqra raheem </h2>
+        <h2>iqra raheem</h2>
 
         <div>
             <a href="#about">About</a>
@@ -282,7 +305,7 @@
             <small>AI/ML & Python Developer</small>
 
             <h1>
-                Hi, I'm <span>iqra raheem </span>
+                Hi, I'm <span>iqra raheem</span>
             </h1>
 
             <p>
@@ -361,6 +384,8 @@
             <div class="skill">SQL / MySQL</div>
             <div class="skill">HTML & CSS</div>
             <div class="skill">Git & GitHub</div>
+            <div class="skill">Cybersecurity</div>
+            <div class="skill">Secure Coding</div>
 
         </div>
 
@@ -371,39 +396,87 @@
     <section id="projects">
 
         <div class="section-title">
-            <h2>Featured Project</h2>
-            <p>My main AI/ML project</p>
+            <h2>Featured Projects</h2>
+            <p>My AI/ML and software development projects</p>
         </div>
 
-        <div class="project">
+        <div class="projects-container">
 
-            <h3>
-                🧠 Human Emotion Recognition Using CNN
-            </h3>
+            <!-- Human Emotion Recognition -->
+            <div class="project">
 
-            <p>
-                A CNN-based web application that recognizes human emotions
-                from facial expressions using the FER-2013 dataset.
-            </p>
+                <h3>
+                    🧠 Human Emotion Recognition Using CNN
+                </h3>
 
-            <ul>
-                <li>Real-time emotion detection using webcam</li>
-                <li>Multiple face detection</li>
-                <li>Image upload for prediction</li>
-                <li>Confidence percentage</li>
-                <li>Emotion analysis graph</li>
-                <li>Emotion history</li>
-                <li>Classification report</li>
-                <li>Confusion matrix</li>
-                <li>Login and logout system</li>
-                <li>Flask-based dashboard</li>
-            </ul>
+                <p>
+                    A CNN-based web application that recognizes human emotions
+                    from facial expressions using the FER-2013 dataset.
+                </p>
 
-            <a class="btn"
-               href="https://github.com/iqra-raheem/human-emotion-recognition-CNN"
-               target="_blank">
-                View Project
-            </a>
+                <ul>
+                    <li>Real-time emotion detection using webcam</li>
+                    <li>Multiple face detection</li>
+                    <li>Image upload for prediction</li>
+                    <li>Confidence percentage</li>
+                    <li>Emotion analysis graph</li>
+                    <li>Emotion history</li>
+                    <li>Classification report</li>
+                    <li>Confusion matrix</li>
+                    <li>Login and logout system</li>
+                    <li>Flask-based dashboard</li>
+                </ul>
+
+                <div class="project-tech">
+                    Python • TensorFlow • Keras • OpenCV • Flask
+                </div>
+
+                <a class="btn"
+                   href="https://github.com/iqra-raheem/human-emotion-recognition-CNN"
+                   target="_blank">
+                    View Project
+                </a>
+
+            </div>
+
+
+            <!-- AI Code Vulnerability Detector -->
+            <div class="project">
+
+                <h3>
+                    🛡️ AI-Based Code Vulnerability Detector
+                </h3>
+
+                <p>
+                    An AI-based source code security analyzer that identifies
+                    potential vulnerabilities using rule-based security analysis
+                    and machine learning.
+                </p>
+
+                <ul>
+                    <li>Source code security analysis</li>
+                    <li>SQL Injection detection</li>
+                    <li>Cross-Site Scripting (XSS) detection</li>
+                    <li>Command Injection detection</li>
+                    <li>Path Traversal detection</li>
+                    <li>Hard-Coded Secret detection</li>
+                    <li>AI/ML-based CWE classification</li>
+                    <li>Vulnerability severity detection</li>
+                    <li>Secure code recommendations</li>
+                    <li>Security report generation</li>
+                </ul>
+
+                <div class="project-tech">
+                    Python • Flask • Scikit-learn • SVM • TF-IDF
+                </div>
+
+                <a class="btn"
+                   href="https://github.com/iqra-raheem/AI-Code-Vulnerability-Detector"
+                   target="_blank">
+                    View Project
+                </a>
+
+            </div>
 
         </div>
 
@@ -436,8 +509,9 @@
 
 
     <footer>
-        © 2026 iqra raheem  | AI/ML & Python Developer
+        © 2026 iqra raheem | AI/ML & Python Developer
     </footer>
 
 </body>
 </html>
+```
