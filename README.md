@@ -8,55 +8,33 @@ I enjoy building practical projects that solve real-world problems and help me i
 
 ---
 
-## 🚀 Featured Project
+## 🚀 Featured Projects
 
 ### 🧠 Human Emotion Recognition Using CNN
 
 A CNN-based web application that recognizes human emotions from facial expressions.
 
 **Features:**
-- 🎥 Real-time emotion detection using webcam
-- 🖼️ Image upload for emotion prediction
-- 👥 Multiple face detection
-- 📊 Confidence percentage
-- 📈 Emotion analysis graph
-- 📝 Emotion history
-- 📋 Classification report
-- 🔲 Confusion matrix
-- 🔐 Login and logout system
-- 🌐 Flask-based web dashboard
+
+* 🎥 Real-time emotion detection using webcam
+* 🖼️ Image upload for emotion prediction
+* 👥 Multiple face detection
+* 📊 Confidence percentage
+* 📈 Emotion analysis graph
+* 📝 Emotion history
+* 📋 Classification report
+* 🔲 Confusion matrix
+* 🔐 Login and logout system
+* 🌐 Flask-based web dashboard
 
 **Technologies:**
 Python • TensorFlow • Keras • OpenCV • NumPy • Pandas • Scikit-learn • Flask • HTML • CSS
 
----
-
-## 💻 Skills
-
-- Python
-- Machine Learning
-- Deep Learning
-- CNN
-- Computer Vision
-- TensorFlow & Keras
-- OpenCV
-- Flask
-- SQL & MySQL
-- HTML & CSS
-- Git & GitHub
+🔗 **Project:** [Human Emotion Recognition Using CNN](https://github.com/iqra-raheem/human-emotion-recognition-CNN)
 
 ---
 
-## 📚 Currently Learning
-
-- Artificial Intelligence
-- Machine Learning
-- Deep Learning
-- Computer Vision
-- Web Development
-- Software Development
- ---
-## 🛡️ AI-Based Code Vulnerability Detector
+### 🛡️ AI-Based Code Vulnerability Detector
 
 An AI-based source code security analyzer that identifies potential vulnerabilities using rule-based security analysis and machine learning.
 
@@ -80,9 +58,37 @@ Python • Flask • Scikit-learn • SVM • TF-IDF • HTML • CSS
 
 ---
 
+## 💻 Skills
+
+* Python
+* Machine Learning
+* Deep Learning
+* CNN
+* Computer Vision
+* TensorFlow & Keras
+* OpenCV
+* Flask
+* SQL & MySQL
+* HTML & CSS
+* Git & GitHub
+
+---
+
+## 📚 Currently Learning
+
+* Artificial Intelligence
+* Machine Learning
+* Deep Learning
+* Computer Vision
+* Web Development
+* Software Development
+* Cybersecurity & Secure Coding
+
+---
+
 ## 🎯 Goals
 
-I am interested in working on AI/ML projects, computer vision applications, and custom software solutions.
+I am interested in working on AI/ML projects, computer vision applications, cybersecurity tools, and custom software solutions.
 
 I am also open to collaboration and freelance project opportunities.
 
@@ -90,11 +96,5 @@ I am also open to collaboration and freelance project opportunities.
 
 ## 📫 Contact
 
-GitHub: [@iqra-raheem](https://github.com/iqra-raheem)
-## 📫 Contact
-## 📫 Contact
-
 * GitHub: [@iqra-raheem](https://github.com/iqra-raheem)
 * Email: [iqrakhan5101023@gmail.com](mailto:iqrakhan5101023@gmail.com)
-
-
