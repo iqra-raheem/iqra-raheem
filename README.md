@@ -55,6 +55,28 @@ Python • TensorFlow • Keras • OpenCV • NumPy • Pandas • Scikit-learn
 - Computer Vision
 - Web Development
 - Software Development
+ ---
+## 🛡️ AI-Based Code Vulnerability Detector
+
+An AI-based source code security analyzer that identifies potential vulnerabilities using rule-based security analysis and machine learning.
+
+**Features:**
+
+* 🔍 Source code analysis
+* 💉 SQL Injection detection
+* 🌐 Cross-Site Scripting (XSS) detection
+* 💻 Command Injection detection
+* 📁 Path Traversal detection
+* 🔐 Hard-Coded Secret detection
+* 🤖 AI/ML-based CWE classification
+* ⚠️ Vulnerability severity detection
+* 💡 Secure code recommendations
+* 📄 Security report generation
+
+**Technologies:**
+Python • Flask • Scikit-learn • SVM • TF-IDF • HTML • CSS
+
+🔗 **Project:** [AI-Based Code Vulnerability Detector](https://github.com/iqra-raheem/AI-Code-Vulnerability-Detector)
 
 ---
 
