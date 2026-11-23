@@ -153,6 +153,8 @@ h1 span {
     margin-top: 30px;
 }
 
+/* ALL BUTTONS */
+
 .btn {
     display: inline-flex;
     align-items: center;
@@ -161,24 +163,33 @@ h1 span {
     padding: 12px 21px;
     border-radius: 10px;
     font-weight: 700;
-    border: 1px solid var(--border);
-    transition: .25s;
-}
-
-.btn-primary {
+    border: none;
     color: #0b1020;
     background: linear-gradient(120deg,var(--accent),var(--accent2));
-    border: none;
+    transition: .25s;
 }
 
 .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(155,140,255,.15);
+    box-shadow: 0 10px 25px rgba(155,140,255,.25);
 }
+
+/* PROFILE PICTURE ANIMATION */
 
 .portrait-wrap {
     display: grid;
     place-items: center;
+    animation: floatPicture 3.5s ease-in-out infinite;
+}
+
+@keyframes floatPicture {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-16px);
+    }
 }
 
 .portrait-ring {
@@ -187,7 +198,18 @@ h1 span {
     border-radius: 50%;
     padding: 9px;
     background: linear-gradient(135deg,var(--accent),var(--accent2));
-    box-shadow: 0 0 70px rgba(155,140,255,.2);
+    box-shadow: 0 0 40px rgba(155,140,255,.3);
+    animation: glowPicture 3s ease-in-out infinite alternate;
+}
+
+@keyframes glowPicture {
+    from {
+        box-shadow: 0 0 30px rgba(155,140,255,.25);
+    }
+
+    to {
+        box-shadow: 0 0 75px rgba(98,215,232,.5);
+    }
 }
 
 .portrait {
@@ -209,21 +231,34 @@ section {
     margin-bottom: 38px;
 }
 
+/* SECTION SMALL HEADINGS */
+
 .section-kicker {
     color: var(--accent2);
-    font-weight: 700;
-    font-size: .8rem;
+    font-weight: 900;
+    font-size: .9rem;
     letter-spacing: 2px;
     text-transform: uppercase;
+    margin-bottom: 7px;
 }
+
+/* MAIN SECTION TITLES */
 
 h2 {
     font-size: clamp(2rem,4vw,2.8rem);
-    margin: 6px 0;
+    line-height: 1.2;
+    margin: 6px 0 9px;
+    font-weight: 800;
+    color: #ffffff;
 }
 
+/* SECTION DESCRIPTIONS */
+
 .section-subtitle {
-    color: var(--muted);
+    color: #cbd5e8;
+    font-size: .9rem;
+    font-weight: 600;
+    letter-spacing: .2px;
 }
 
 /* ABOUT */
@@ -479,8 +514,12 @@ footer {
         font-size: 2rem;
     }
 
+    .section-kicker {
+        font-size: .82rem;
+    }
+
     .section-subtitle {
-        font-size: .9rem;
+        font-size: .82rem;
     }
 
     .about-card {
@@ -573,6 +612,23 @@ footer {
         grid-template-columns: repeat(2,minmax(0,1fr));
     }
 }
+
+/* REDUCED MOTION ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+    }
+}
+
 </style>
 </head>
 
@@ -580,6 +636,7 @@ footer {
 
 <header>
     <nav class="container">
+
         <a class="logo" href="#home">IQRA RAHEEM<span>.</span></a>
 
         <ul class="nav-links">
@@ -589,6 +646,7 @@ footer {
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+
     </nav>
 </header>
 
@@ -599,6 +657,7 @@ footer {
 <section class="container hero" id="home">
 
     <div>
+
         <div class="eyebrow">AI/ML &amp; Python Developer</div>
 
         <h1>Hi, I'm <span>Iqra Raheem</span></h1>
@@ -612,7 +671,7 @@ footer {
 
         <div class="actions">
 
-            <a class="btn btn-primary" href="#projects">
+            <a class="btn" href="#projects">
                 Explore My Projects ↗
             </a>
 
@@ -622,8 +681,6 @@ footer {
                 Visit GitHub ↗
             </a>
 
-            <!-- DOWNLOAD CV BUTTON -->
-
             <a class="btn"
                href="https://raw.githubusercontent.com/iqra-raheem/iqra-raheem/main/Iqra_Rahim_Professional_CV%20%281%29.pdf"
                download>
@@ -631,15 +688,20 @@ footer {
             </a>
 
         </div>
+
     </div>
 
     <div class="portrait-wrap">
+
         <div class="portrait-ring">
+
             <img
                 class="portrait"
                 src="https://github.com/iqra-raheem.png?size=600"
                 alt="Profile picture of Iqra Raheem">
+
         </div>
+
     </div>
 
 </section>
@@ -647,17 +709,23 @@ footer {
 <!-- ABOUT SECTION -->
 
 <section id="about">
+
     <div class="container">
 
         <div class="section-head">
+
             <div class="section-kicker">A little about me</div>
+
             <h2>About Me</h2>
+
             <p class="section-subtitle">
                 Who I am and what I enjoy building
             </p>
+
         </div>
 
         <div class="about-card">
+
             <p>
                 I am a Computer Science student interested in building
                 practical software and AI-powered applications. My main
@@ -672,25 +740,33 @@ footer {
                 skills and exploring technologies that can solve
                 real-world problems.
             </p>
+
         </div>
 
     </div>
+
 </section>
 
 <!-- SKILLS SECTION -->
 
 <section id="skills">
+
     <div class="container">
 
         <div class="section-head">
+
             <div class="section-kicker">My toolkit</div>
+
             <h2>Skills &amp; Technologies</h2>
+
             <p class="section-subtitle">
                 Tools and areas I have explored through learning and projects
             </p>
+
         </div>
 
         <div class="skills-grid">
+
             <div class="skill">Python</div>
             <div class="skill">Machine Learning</div>
             <div class="skill">Deep Learning</div>
@@ -705,22 +781,29 @@ footer {
             <div class="skill">Git &amp; GitHub</div>
             <div class="skill">Cybersecurity</div>
             <div class="skill">Secure Coding</div>
+
         </div>
 
     </div>
+
 </section>
 
 <!-- PROJECTS SECTION -->
 
 <section id="projects">
+
     <div class="container">
 
         <div class="section-head">
+
             <div class="section-kicker">What I've built</div>
+
             <h2>Featured Projects</h2>
+
             <p class="section-subtitle">
                 A selection of my AI/ML and software development work
             </p>
+
         </div>
 
         <div class="projects-grid">
@@ -728,6 +811,7 @@ footer {
             <!-- PROJECT ONE -->
 
             <article class="project-card">
+
                 <div class="project-icon">🧠</div>
 
                 <h3>Human Emotion Recognition Using CNN</h3>
@@ -760,11 +844,13 @@ footer {
                    target="_blank" rel="noopener noreferrer">
                     View on GitHub ↗
                 </a>
+
             </article>
 
             <!-- PROJECT TWO -->
 
             <article class="project-card">
+
                 <div class="project-icon">🛡️</div>
 
                 <h3>AI-Based Code Vulnerability Detector</h3>
@@ -798,26 +884,35 @@ footer {
                    target="_blank" rel="noopener noreferrer">
                     View on GitHub ↗
                 </a>
+
             </article>
 
         </div>
+
     </div>
+
 </section>
 
 <!-- CONTACT SECTION -->
 
 <section id="contact">
+
     <div class="container">
 
         <div class="section-head" style="text-align:center">
+
             <div class="section-kicker">Get in touch</div>
+
             <h2>Let's Connect</h2>
+
             <p class="section-subtitle">
                 Open to learning, collaboration and suitable opportunities
             </p>
+
         </div>
 
         <div class="contact-card">
+
             <p>
                 Have a project idea or want to connect? Feel free to
                 reach out by email or find me on GitHub.
@@ -829,7 +924,7 @@ footer {
 
             <div class="actions" style="justify-content:center;margin-top:0">
 
-                <a class="btn btn-primary"
+                <a class="btn"
                    href="mailto:iqrakhan5101023@gmail.com">
                     Email Me ↗
                 </a>
@@ -841,12 +936,16 @@ footer {
                 </a>
 
             </div>
+
         </div>
 
     </div>
+
 </section>
 
 </main>
+
+<!-- FOOTER -->
 
 <footer>
     <div class="container">
@@ -861,23 +960,29 @@ const sections = document.querySelectorAll("main section");
 const navLinks = document.querySelectorAll(".nav-links a");
 
 function updateActiveNavigation() {
+
     let current = "home";
 
     sections.forEach(section => {
+
         const sectionTop = section.offsetTop - 160;
 
         if (window.scrollY >= sectionTop) {
             current = section.getAttribute("id");
         }
+
     });
 
     navLinks.forEach(link => {
+
         link.classList.remove("active");
 
         if (link.getAttribute("href") === "#" + current) {
             link.classList.add("active");
         }
+
     });
+
 }
 
 window.addEventListener("scroll", updateActiveNavigation);
