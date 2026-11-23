@@ -69,8 +69,6 @@ nav {
     gap: 20px;
 }
 
-/* LOGO */
-
 .logo {
     font-size: 1.35rem;
     font-weight: 900;
@@ -82,8 +80,6 @@ nav {
 .logo span {
     color: var(--accent);
 }
-
-/* NAVIGATION BUTTONS */
 
 .nav-links {
     display: flex;
@@ -384,7 +380,6 @@ footer {
 /* TABLET RESPONSIVENESS */
 
 @media (max-width: 900px) {
-
     .container {
         width: 92%;
     }
@@ -418,7 +413,6 @@ footer {
 /* MOBILE RESPONSIVENESS */
 
 @media (max-width: 650px) {
-
     html {
         scroll-padding-top: 125px;
     }
@@ -549,7 +543,6 @@ footer {
 /* SMALL MOBILE SCREENS */
 
 @media (max-width: 380px) {
-
     .nav-links {
         gap: 5px;
         font-size: .76rem;
@@ -580,7 +573,6 @@ footer {
         grid-template-columns: repeat(2,minmax(0,1fr));
     }
 }
-
 </style>
 </head>
 
@@ -588,7 +580,6 @@ footer {
 
 <header>
     <nav class="container">
-
         <a class="logo" href="#home">IQRA RAHEEM<span>.</span></a>
 
         <ul class="nav-links">
@@ -598,7 +589,6 @@ footer {
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-
     </nav>
 </header>
 
@@ -609,7 +599,6 @@ footer {
 <section class="container hero" id="home">
 
     <div>
-
         <div class="eyebrow">AI/ML &amp; Python Developer</div>
 
         <h1>Hi, I'm <span>Iqra Raheem</span></h1>
@@ -633,21 +622,24 @@ footer {
                 Visit GitHub ↗
             </a>
 
-        </div>
+            <!-- DOWNLOAD CV BUTTON -->
 
+            <a class="btn"
+               href="https://raw.githubusercontent.com/iqra-raheem/iqra-raheem/main/Iqra_Rahim_Professional_CV%20%281%29.pdf"
+               download>
+                Download CV ↓
+            </a>
+
+        </div>
     </div>
 
     <div class="portrait-wrap">
-
         <div class="portrait-ring">
-
             <img
                 class="portrait"
                 src="https://github.com/iqra-raheem.png?size=600"
                 alt="Profile picture of Iqra Raheem">
-
         </div>
-
     </div>
 
 </section>
@@ -655,23 +647,17 @@ footer {
 <!-- ABOUT SECTION -->
 
 <section id="about">
-
     <div class="container">
 
         <div class="section-head">
-
             <div class="section-kicker">A little about me</div>
-
             <h2>About Me</h2>
-
             <p class="section-subtitle">
                 Who I am and what I enjoy building
             </p>
-
         </div>
 
         <div class="about-card">
-
             <p>
                 I am a Computer Science student interested in building
                 practical software and AI-powered applications. My main
@@ -686,33 +672,25 @@ footer {
                 skills and exploring technologies that can solve
                 real-world problems.
             </p>
-
         </div>
 
     </div>
-
 </section>
 
 <!-- SKILLS SECTION -->
 
 <section id="skills">
-
     <div class="container">
 
         <div class="section-head">
-
             <div class="section-kicker">My toolkit</div>
-
             <h2>Skills &amp; Technologies</h2>
-
             <p class="section-subtitle">
                 Tools and areas I have explored through learning and projects
             </p>
-
         </div>
 
         <div class="skills-grid">
-
             <div class="skill">Python</div>
             <div class="skill">Machine Learning</div>
             <div class="skill">Deep Learning</div>
@@ -727,29 +705,22 @@ footer {
             <div class="skill">Git &amp; GitHub</div>
             <div class="skill">Cybersecurity</div>
             <div class="skill">Secure Coding</div>
-
         </div>
 
     </div>
-
 </section>
 
 <!-- PROJECTS SECTION -->
 
 <section id="projects">
-
     <div class="container">
 
         <div class="section-head">
-
             <div class="section-kicker">What I've built</div>
-
             <h2>Featured Projects</h2>
-
             <p class="section-subtitle">
                 A selection of my AI/ML and software development work
             </p>
-
         </div>
 
         <div class="projects-grid">
@@ -757,7 +728,6 @@ footer {
             <!-- PROJECT ONE -->
 
             <article class="project-card">
-
                 <div class="project-icon">🧠</div>
 
                 <h3>Human Emotion Recognition Using CNN</h3>
@@ -790,13 +760,11 @@ footer {
                    target="_blank" rel="noopener noreferrer">
                     View on GitHub ↗
                 </a>
-
             </article>
 
             <!-- PROJECT TWO -->
 
             <article class="project-card">
-
                 <div class="project-icon">🛡️</div>
 
                 <h3>AI-Based Code Vulnerability Detector</h3>
@@ -830,35 +798,26 @@ footer {
                    target="_blank" rel="noopener noreferrer">
                     View on GitHub ↗
                 </a>
-
             </article>
 
         </div>
-
     </div>
-
 </section>
 
 <!-- CONTACT SECTION -->
 
 <section id="contact">
-
     <div class="container">
 
         <div class="section-head" style="text-align:center">
-
             <div class="section-kicker">Get in touch</div>
-
             <h2>Let's Connect</h2>
-
             <p class="section-subtitle">
                 Open to learning, collaboration and suitable opportunities
             </p>
-
         </div>
 
         <div class="contact-card">
-
             <p>
                 Have a project idea or want to connect? Feel free to
                 reach out by email or find me on GitHub.
@@ -882,16 +841,12 @@ footer {
                 </a>
 
             </div>
-
         </div>
 
     </div>
-
 </section>
 
 </main>
-
-<!-- FOOTER -->
 
 <footer>
     <div class="container">
@@ -906,29 +861,23 @@ const sections = document.querySelectorAll("main section");
 const navLinks = document.querySelectorAll(".nav-links a");
 
 function updateActiveNavigation() {
-
     let current = "home";
 
     sections.forEach(section => {
-
         const sectionTop = section.offsetTop - 160;
 
         if (window.scrollY >= sectionTop) {
             current = section.getAttribute("id");
         }
-
     });
 
     navLinks.forEach(link => {
-
         link.classList.remove("active");
 
         if (link.getAttribute("href") === "#" + current) {
             link.classList.add("active");
         }
-
     });
-
 }
 
 window.addEventListener("scroll", updateActiveNavigation);
