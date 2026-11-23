@@ -1,517 +1,81 @@
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>iqra raheem | AI/ML & Python Developer</title>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background: #0b1020;
-            color: #ffffff;
-            line-height: 1.6;
-        }
-
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: rgba(11, 16, 32, 0.95);
-            padding: 18px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #252d48;
-        }
-
-        nav h2 {
-            color: #c084fc;
-        }
-
-        nav a {
-            color: #ffffff;
-            text-decoration: none;
-            margin-left: 25px;
-            font-size: 14px;
-        }
-
-        nav a:hover {
-            color: #c084fc;
-        }
-
-        .hero {
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 80px 8%;
-            gap: 40px;
-            background:
-                radial-gradient(circle at 80% 30%, #3b1d63 0%, transparent 35%),
-                #0b1020;
-        }
-
-        .hero-text {
-            max-width: 650px;
-        }
-
-        .hero-text small {
-            color: #c084fc;
-            font-size: 16px;
-        }
-
-        .hero-text h1 {
-            font-size: 55px;
-            line-height: 1.1;
-            margin: 15px 0;
-        }
-
-        .hero-text h1 span {
-            color: #c084fc;
-        }
-
-        .hero-text p {
-            color: #cbd5e1;
-            font-size: 18px;
-            margin-bottom: 25px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 13px 25px;
-            background: #c084fc;
-            color: #0b1020;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            margin-right: 10px;
-        }
-
-        .btn:hover {
-            background: #e9d5ff;
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: #ffffff;
-            border: 1px solid #c084fc;
-        }
-
-        .hero-card {
-            width: 320px;
-            height: 320px;
-            border-radius: 50%;
-            border: 2px solid #c084fc;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #151b30;
-            box-shadow: 0 0 60px rgba(192, 132, 252, 0.25);
-        }
-
-        .hero-card span {
-            font-size: 90px;
-        }
-
-        section {
-            padding: 80px 8%;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 45px;
-        }
-
-        .section-title h2 {
-            font-size: 35px;
-            color: #c084fc;
-        }
-
-        .section-title p {
-            color: #94a3b8;
-        }
-
-        .about {
-            background: #10162a;
-        }
-
-        .about-text {
-            max-width: 850px;
-            margin: auto;
-            text-align: center;
-            color: #cbd5e1;
-            font-size: 17px;
-        }
-
-        .skills {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 18px;
-            max-width: 900px;
-            margin: auto;
-        }
-
-        .skill {
-            background: #151b30;
-            border: 1px solid #252d48;
-            padding: 20px;
-            text-align: center;
-            border-radius: 10px;
-            color: #e2e8f0;
-        }
-
-        .skill:hover {
-            border-color: #c084fc;
-            transform: translateY(-3px);
-        }
-
-        .projects-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 25px;
-            max-width: 1100px;
-            margin: auto;
-        }
-
-        .project {
-            background: #151b30;
-            border: 1px solid #252d48;
-            border-radius: 15px;
-            padding: 35px;
-        }
-
-        .project:hover {
-            border-color: #c084fc;
-            transform: translateY(-4px);
-            transition: 0.3s;
-        }
-
-        .project h3 {
-            color: #c084fc;
-            font-size: 24px;
-            margin-bottom: 15px;
-        }
-
-        .project p {
-            color: #cbd5e1;
-            margin-bottom: 20px;
-        }
-
-        .project ul {
-            list-style: none;
-            margin-bottom: 25px;
-        }
-
-        .project li {
-            margin: 8px 0;
-            color: #cbd5e1;
-        }
-
-        .project li::before {
-            content: "✓ ";
-            color: #c084fc;
-            font-weight: bold;
-        }
-
-        .project-tech {
-            color: #94a3b8;
-            font-size: 14px;
-            margin-bottom: 25px;
-        }
-
-        .contact {
-            background: #10162a;
-            text-align: center;
-        }
-
-        .contact p {
-            color: #cbd5e1;
-            margin: 10px 0;
-        }
-
-        footer {
-            text-align: center;
-            padding: 25px;
-            background: #080c18;
-            color: #64748b;
-        }
-
-        @media (max-width: 800px) {
-            nav {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            nav a {
-                margin: 0 8px;
-            }
-
-            .hero {
-                flex-direction: column;
-                text-align: center;
-                padding-top: 60px;
-            }
-
-            .hero-text h1 {
-                font-size: 40px;
-            }
-
-            .hero-card {
-                width: 220px;
-                height: 220px;
-            }
-
-            .hero-card span {
-                font-size: 60px;
-            }
-
-            .projects-container {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
-    <!-- Navigation -->
-    <nav>
-        <h2>iqra raheem</h2>
-
-        <div>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
-
-
-    <!-- Hero Section -->
-    <section class="hero">
-
-        <div class="hero-text">
-
-            <small>AI/ML & Python Developer</small>
-
-            <h1>
-                Hi, I'm <span>iqra raheem</span>
-            </h1>
-
-            <p>
-                Computer Science student passionate about Artificial Intelligence,
-                Machine Learning, Computer Vision and Python development.
-            </p>
-
-            <a class="btn"
-               href="https://github.com/iqra-raheem"
-               target="_blank">
-                View GitHub
-            </a>
-
-            <a class="btn btn-outline"
-               href="#projects">
-                My Projects
-            </a>
-
-        </div>
-
-        <div class="hero-card">
-            <span>🤖</span>
-        </div>
-
-    </section>
-
-
-    <!-- About -->
-    <section id="about" class="about">
-
-        <div class="section-title">
-            <h2>About Me</h2>
-            <p>Who I am and what I do</p>
-        </div>
-
-        <div class="about-text">
-
-            <p>
-                I am a Computer Science student interested in building
-                practical software and AI-powered applications.
-                My main interests include Machine Learning, Deep Learning,
-                Computer Vision, CNN models and web applications.
-            </p>
-
-            <br>
-
-            <p>
-                I enjoy learning new technologies and developing projects
-                that solve real-world problems.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- Skills -->
-    <section id="skills">
-
-        <div class="section-title">
-            <h2>My Skills</h2>
-            <p>Technologies and areas I work with</p>
-        </div>
-
-        <div class="skills">
-
-            <div class="skill">Python</div>
-            <div class="skill">Machine Learning</div>
-            <div class="skill">Deep Learning</div>
-            <div class="skill">CNN</div>
-            <div class="skill">Computer Vision</div>
-            <div class="skill">TensorFlow</div>
-            <div class="skill">Keras</div>
-            <div class="skill">OpenCV</div>
-            <div class="skill">Flask</div>
-            <div class="skill">SQL / MySQL</div>
-            <div class="skill">HTML & CSS</div>
-            <div class="skill">Git & GitHub</div>
-            <div class="skill">Cybersecurity</div>
-            <div class="skill">Secure Coding</div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Projects -->
-    <section id="projects">
-
-        <div class="section-title">
-            <h2>Featured Projects</h2>
-            <p>My AI/ML and software development projects</p>
-        </div>
-
-        <div class="projects-container">
-
-            <!-- Human Emotion Recognition -->
-            <div class="project">
-
-                <h3>
-                    🧠 Human Emotion Recognition Using CNN
-                </h3>
-
-                <p>
-                    A CNN-based web application that recognizes human emotions
-                    from facial expressions using the FER-2013 dataset.
-                </p>
-
-                <ul>
-                    <li>Real-time emotion detection using webcam</li>
-                    <li>Multiple face detection</li>
-                    <li>Image upload for prediction</li>
-                    <li>Confidence percentage</li>
-                    <li>Emotion analysis graph</li>
-                    <li>Emotion history</li>
-                    <li>Classification report</li>
-                    <li>Confusion matrix</li>
-                    <li>Login and logout system</li>
-                    <li>Flask-based dashboard</li>
-                </ul>
-
-                <div class="project-tech">
-                    Python • TensorFlow • Keras • OpenCV • Flask
-                </div>
-
-                <a class="btn"
-                   href="https://github.com/iqra-raheem/human-emotion-recognition-CNN"
-                   target="_blank">
-                    View Project
-                </a>
-
-            </div>
-
-
-            <!-- AI Code Vulnerability Detector -->
-            <div class="project">
-
-                <h3>
-                    🛡️ AI-Based Code Vulnerability Detector
-                </h3>
-
-                <p>
-                    An AI-based source code security analyzer that identifies
-                    potential vulnerabilities using rule-based security analysis
-                    and machine learning.
-                </p>
-
-                <ul>
-                    <li>Source code security analysis</li>
-                    <li>SQL Injection detection</li>
-                    <li>Cross-Site Scripting (XSS) detection</li>
-                    <li>Command Injection detection</li>
-                    <li>Path Traversal detection</li>
-                    <li>Hard-Coded Secret detection</li>
-                    <li>AI/ML-based CWE classification</li>
-                    <li>Vulnerability severity detection</li>
-                    <li>Secure code recommendations</li>
-                    <li>Security report generation</li>
-                </ul>
-
-                <div class="project-tech">
-                    Python • Flask • Scikit-learn • SVM • TF-IDF
-                </div>
-
-                <a class="btn"
-                   href="https://github.com/iqra-raheem/AI-Code-Vulnerability-Detector"
-                   target="_blank">
-                    View Project
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Contact -->
-    <section id="contact" class="contact">
-
-        <div class="section-title">
-            <h2>Let's Connect</h2>
-            <p>Interested in AI/ML projects or collaboration?</p>
-        </div>
-
-        <p>
-            📧 iqrakhan5101023@gmail.com
-        </p>
-
-        <p>
-            GitHub:
-            <a
-                href="https://github.com/iqra-raheem"
-                target="_blank"
-                style="color:#c084fc;">
-                github.com/iqra-raheem
-            </a>
-        </p>
-
-    </section>
-
-
-    <footer>
-        © 2026 iqra raheem | AI/ML & Python Developer
-    </footer>
-
-</body>
-</html>
-```
+Iqra.
+Home
+About
+Skills
+Projects
+Contact
+AI/ML & Python Developer
+Hi, I'm Iqra Raheem
+I'm a Computer Science student passionate about Artificial Intelligence, Machine Learning, Computer Vision and Python development. I enjoy turning ideas into practical projects and continuously learning new technologies.
+
+Explore My Projects
+↗
+Visit GitHub
+Profile picture of Iqra Raheem
+A little about me
+About Me
+Who I am and what I enjoy building
+
+I am a Computer Science student interested in building practical software and AI-powered applications. My main interests include Machine Learning, Deep Learning, Computer Vision, CNN models and web application development.
+
+I have worked on projects involving facial emotion recognition and source code vulnerability detection. I enjoy learning by building, improving my problem-solving skills and exploring technologies that can solve real-world problems.
+
+My toolkit
+Skills & Technologies
+Tools and areas I have explored through learning and projects
+
+Python
+Machine Learning
+Deep Learning
+CNN
+Computer Vision
+TensorFlow
+Keras
+OpenCV
+Flask
+SQL / MySQL
+HTML & CSS
+Git & GitHub
+Cybersecurity
+Secure Coding
+What I've built
+Featured Projects
+A selection of my AI/ML and software development work
+
+🧠
+Human Emotion Recognition Using CNN
+A CNN-based application that recognizes human emotions from facial expressions using the FER-2013 dataset.
+
+Real-time emotion detection using webcam
+Multiple face detection
+Image upload for prediction
+Prediction confidence percentage
+Emotion history and analysis graphs
+Classification report and confusion matrix
+Login system and Flask dashboard
+Python · TensorFlow · Keras · OpenCV · Flask
+View on GitHub ↗
+🛡️
+AI-Based Code Vulnerability Detector
+A source-code security analyzer combining rule-based checks and machine learning to identify potential vulnerabilities.
+
+Source code security analysis
+SQL Injection and XSS detection
+Command Injection detection
+Path Traversal detection
+Hard-coded secret detection
+CWE classification and severity analysis
+Secure code recommendations and reports
+Python · Flask · Scikit-learn · SVM · TF-IDF
+View on GitHub ↗
+Get in touch
+Let's Connect
+Open to learning, collaboration and suitable opportunities
+
+Have a project idea or want to connect? Feel free to reach out by email or find me on GitHub.
+
+iqrakhan5101023@gmail.com
+
+Email Me
+GitHub Profile
+© 2026 Iqra Raheem · AI/ML & Python Developer
